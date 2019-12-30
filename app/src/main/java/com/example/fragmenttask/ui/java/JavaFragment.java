@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fragmenttask.R;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,12 +37,11 @@ public class JavaFragment extends Fragment {
     ProgressDialog dialog;
 
 
-    public View onCreateView(@NonNull LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_java, container, false);
 
         recyclerViewJava = root.findViewById(R.id.recyclerViewJava);
-
 
 
         dialog = new ProgressDialog(getActivity());
@@ -57,9 +57,9 @@ public class JavaFragment extends Fragment {
     }
 
 
-    public void getMails(){
+    public void getMails() {
 
-        Retrofit retrofit = new  Retrofit.Builder().baseUrl(Api.BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(Api.BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
 
         Api api = retrofit.create(Api.class);
 
@@ -70,31 +70,20 @@ public class JavaFragment extends Fragment {
             @Override
             public void onResponse(Call<List<JavaPOJO>> call, Response<List<JavaPOJO>> response) {
 
-                if(response.code()==200){
-
+                if (response.code() == 200) {
 
                     dialog.dismiss();
 
-                        List<JavaPOJO> pojoList=response.body();
+                    List<JavaPOJO> pojoList = response.body();
 
+                    Log.d("test", " SUCCESS : " + pojoList);
 
-
-
-
-                        Log.d("test"," SUCCESS : "+pojoList);
-
-                        recyclerViewJava.setLayoutManager(new LinearLayoutManager(getContext()));
-                        javaAdapter = new JavaAdapter(getContext(),pojoList);
-                        recyclerViewJava.setAdapter(javaAdapter);
-
-
-
-
-
+                    recyclerViewJava.setLayoutManager(new LinearLayoutManager(getContext()));
+                    javaAdapter = new JavaAdapter(getContext(), pojoList);
+                    recyclerViewJava.setAdapter(javaAdapter);
 
 
                 }
-
 
 
             }
@@ -108,6 +97,16 @@ public class JavaFragment extends Fragment {
 
     }
 
+    public class Java {
 
+        @SerializedName("from, subject,picture")
+
+        private String from;
+        private  String subject;
+        private String picture;
+
+        public Java() {
+        }
+    }
 
 }

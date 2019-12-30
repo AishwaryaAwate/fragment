@@ -33,7 +33,7 @@ public class JavaAdapter extends RecyclerView.Adapter<JavaAdapter.JavaViewHolder
     public JavaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        View view = inflater.inflate(R.layout.adapter_java,null);
+        View view = inflater.inflate(R.layout.adapter_java, null);
 
         return new JavaViewHolder(view);
     }
@@ -43,14 +43,12 @@ public class JavaAdapter extends RecyclerView.Adapter<JavaAdapter.JavaViewHolder
 
         JavaPOJO javaPOJO = list.get(position);
 
-        Log.d("test","data :" +javaPOJO.getPicture());
+        Log.d("test", "data :" + javaPOJO.getPicture());
 
-        if(javaPOJO.getPicture()!=null&&!javaPOJO.getPicture().isEmpty()) {
+        if (javaPOJO.getPicture() != null && !javaPOJO.getPicture().isEmpty()) {
             Picasso.with(mContext).load(javaPOJO.getPicture()).into(holder.imageViewJava);
             //holder.text_picture.setVisibility(View.GONE);
-        }
-
-        else {
+        } else {
 
             Picasso.with(mContext).load(R.drawable.avatar).into(holder.imageViewJava);
 
@@ -74,7 +72,7 @@ public class JavaAdapter extends RecyclerView.Adapter<JavaAdapter.JavaViewHolder
 
     public class JavaViewHolder extends RecyclerView.ViewHolder {
 
-        TextView text_from, text_subject,text_message,text_picture;
+        TextView text_from, text_subject, text_message, text_picture;
         ImageView imageViewJava;
 
         public JavaViewHolder(@NonNull View itemView) {

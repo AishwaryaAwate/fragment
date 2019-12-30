@@ -3,9 +3,9 @@ package com.example.fragmenttask.ui.java;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class JavaPOJO  {
-     int id;
-     String isImportant,picture, from,subject,message,timestamp,isRead ;
+public class JavaPOJO {
+    int id;
+    String isImportant, picture, from, subject, message, timestamp, isRead;
 
     public int getId() {
         return id;
