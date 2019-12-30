@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_android"
+            android:icon="@drawable/ic_android_black_24dp"
+            android:title="@string/menu_android" />
+        <item
+            android:id="@+id/nav_php"
+            android:icon="@drawable/php"
+            android:title="@string/menu_php" />
+        <item
+            android:id="@+id/nav_java"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_java" />
+        <item
+            android:id="@+id/nav_testing"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/menu_testing" />
+
+        <item
+            android:id="@+id/nav_networking"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/menu_networking" />
+    </group>
+
+
+
+</menu>

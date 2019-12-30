@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FragmentTask</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Sparken IT Solution Pvt. Ltd.</string>
+    <string name="nav_header_subtitle">www.sparken.in</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_android">Android</string>
+    <string name="menu_php">PHP</string>
+    <string name="menu_java">Java</string>
+    <string name="menu_testing">Testing</string>
+    <string name="menu_networking">Networking</string>
+    
+    <string name="loading">Loading....</string>
+    <string name="please_wait">Please wait</string>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_android">
+
+
+
+    <fragment
+        android:id="@+id/nav_android"
+        android:name="com.example.fragmenttask.ui.android.AndroidFragment"
+        android:label="@string/menu_android"
+        tools:layout="@layout/fragment_android" />
+
+    <fragment
+        android:id="@+id/nav_php"
+        android:name="com.example.fragmenttask.ui.php.PHPFragment"
+        android:label="@string/menu_php"
+        tools:layout="@layout/fragment_php" />
+
+    <fragment
+        android:id="@+id/nav_java"
+        android:name="com.example.fragmenttask.ui.java.JavaFragment"
+        android:label="@string/menu_java"
+        tools:layout="@layout/fragment_java" />
+
+    <fragment
+        android:id="@+id/nav_testing"
+        android:name="com.example.fragmenttask.ui.testing.TestingFragment"
+        android:label="@string/menu_testing"
+        tools:layout="@layout/fragment_testing" />
+    <fragment
+        android:id="@+id/nav_networking"
+        android:name="com.example.fragmenttask.ui.netwoking.NetworkingFragment"
+        android:label="@string/menu_networking"
+        tools:layout="@layout/fragment_php" />
+
+   >
+</navigation>
