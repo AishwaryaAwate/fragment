@@ -2,5 +2,12 @@
 <resources>
     <color name="colorPrimary">#E91E63</color>
     <color name="colorPrimaryDark">#E91E63</color>
-    <color name="colorAccent">#F44336</color>
+    <color name="colorAccent">#9C27B0</color>
+    <color name="light">#FFEEEEEE</color>
+    <color name="dark">#FF222222</color>
+    <color name="editBackground">#ffffff</color>
+    <color name="editFontColor">#E91E63</color>
+    <color name="editHintColor">#3F51B5</color>
+
+
 </resources>

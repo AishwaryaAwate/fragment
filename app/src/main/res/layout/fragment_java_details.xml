@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    >
+
+    <TextView
+        android:id="@+id/text_subject_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Subject"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative_layout_from_details"
+        android:layout_below="@+id/text_subject_details"
+        android:layout_marginTop="10dp">
+
+        <com.example.fragmenttask.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageview_in_details"
+            app:civ_border_color="#ffffff"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_from_details"
+            android:layout_toRightOf="@id/imageview_in_details"
+            android:text="From_details"/>
+
+       <!-- <ExpandableListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/expandable_Listview"
+            android:layout_below="@+id/text_from_details">
+
+        </ExpandableListView>-->
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_message_details"
+        android:hint="Detail msg"
+        android:layout_below="@+id/relative_layout_from_details"
+        android:layout_marginTop="10dp"
+        android:background="#D8D4D4"
+        android:textColor="#000000"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_replay_btn"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_replay"
+            android:layout_weight="1"
+            android:text="Replay"
+            android:background="#ffffff"
+            android:layout_margin="5dp"
+            android:layout_below="@id/text_message_details"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_replay_all"
+            android:layout_weight="1"
+            android:text="Replay all"
+            android:background="#ffffff"
+            android:layout_margin="5dp"
+            android:layout_below="@id/text_message_details"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_forward"
+            android:layout_weight="1"
+            android:text="Forword"
+            android:background="#ffffff"
+            android:layout_margin="5dp"
+            android:layout_below="@id/text_message_details"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

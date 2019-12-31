@@ -1,7 +1,9 @@
 package com.example.fragmenttask;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import com.example.fragmenttask.ui.netwoking.DatabaseHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -25,11 +27,17 @@ import android.view.Menu;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    DatabaseHelper databaseHelper;
+    SQLiteDatabase sqLiteDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        databaseHelper = new DatabaseHelper(this);
+        sqLiteDatabase=databaseHelper.getReadableDatabase();
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

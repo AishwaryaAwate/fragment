@@ -3,7 +3,7 @@ package com.example.fragmenttask.ui.java;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class JavaPOJO {
+public class JavaPOJO implements Parcelable {
     int id;
     String isImportant, picture, from, subject, message, timestamp, isRead;
 
@@ -69,5 +69,15 @@ public class JavaPOJO {
 
     public void setIsRead(String isRead) {
         this.isRead = isRead;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+
     }
 }

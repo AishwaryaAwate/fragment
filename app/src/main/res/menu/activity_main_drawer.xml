@@ -10,7 +10,7 @@
             android:title="@string/menu_android" />
         <item
             android:id="@+id/nav_php"
-            android:icon="@drawable/php"
+            android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_php" />
         <item
             android:id="@+id/nav_java"
@@ -23,7 +23,7 @@
 
         <item
             android:id="@+id/nav_networking"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_networking" />
     </group>
 
