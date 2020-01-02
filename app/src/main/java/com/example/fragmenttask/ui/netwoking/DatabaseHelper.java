@@ -20,6 +20,7 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
     public static final String  COL_4 = "EMAIL";
     public static final String  COL_5 = "PASSWORD";
     public static final String  COL_6 = "MOBILE_NO";
+    public static final String  COL_7 = "GENDER";
 
 
     public DatabaseHelper(@Nullable Context context) {
@@ -34,10 +35,11 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
             db.execSQL( "create table if not exists USER (\n" +
                     "ID int primary key,\n" +
                     "PROFILE_PIC text ,\n" +
-                    "USERNAME varchar(25) , \n" +
-                    "EMAIL varchar  ,\n " +
-                    "PASSWORD varchar(20) ,\n " +
-                    "MOBILE_NO text(10) " +
+                    "USERNAME text , \n" +
+                    "EMAIL text  ,\n " +
+                    "PASSWORD text ,\n " +
+                    "MOBILE_NO text(10),\n " +
+                    "GENDER text(10) " +
                     " );"
             );
 
@@ -69,6 +71,7 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
         contentValues.put(COL_4,networkPOJO.getEmail());
         contentValues.put(COL_5,networkPOJO.getPassword());
         contentValues.put(COL_6,networkPOJO.getMobileNo());
+        contentValues.put(COL_7,networkPOJO.getGender());
 
 
         long result = database.insert(TABLE_NAME,null,contentValues);

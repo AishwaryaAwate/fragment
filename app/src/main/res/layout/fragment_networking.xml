@@ -131,21 +131,33 @@
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true">
 
-            <RadioButton
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/radio_female"
-                android:text="Female"
-                android:textColor="#ffffff"
-                android:layout_marginRight="20dp"/>
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup">
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radio_male"
-                android:text="Male"
-                android:textColor="#ffffff"
-                android:layout_toRightOf="@+id/radio_female"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_female"
+                    android:text="Female"
+                    android:textColor="#ffffff"
+                    android:layout_marginRight="20dp"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_male"
+                    android:text="Male"
+                    android:textColor="#ffffff"
+                    android:layout_toRightOf="@+id/radio_female"/>
+
+            </RadioGroup>
+
+
 
         </RelativeLayout>
 

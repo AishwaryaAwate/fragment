@@ -1,16 +1,22 @@
 package com.example.fragmenttask.ui.netwoking;
 
-public class NetworkPOJO {
-    String profilePic_URL, username, email, password, confirm_password,mobileNo;
+import com.example.fragmenttask.CircleImageView;
 
-    public NetworkPOJO(String profilePic_URL, String username, String email, String password, String confirm_password, String mobileNo) {
+public class NetworkPOJO {
+    String  profilePic_URL, username, email, password, confirm_password,mobileNo,gender;
+
+
+    public NetworkPOJO(String profilePic_URL, String username, String email, String password, String confirm_password, String mobileNo,String gender) {
         this.profilePic_URL = profilePic_URL;
         this.username = username;
         this.email = email;
         this.password = password;
         this.confirm_password = confirm_password;
         this.mobileNo = mobileNo;
+        this.gender = gender;
+
     }
+
 
     public String getProfilePic_URL() {
         return profilePic_URL;
@@ -60,5 +66,11 @@ public class NetworkPOJO {
         this.mobileNo = mobileNo;
     }
 
+    public String getGender() {
+        return gender;
+    }
 
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 }
